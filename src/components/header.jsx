@@ -3,12 +3,17 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [isLoading, setIsLoding] = useState(false);
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
   console.log(loggedInUser);
+  
+//Subscribing to store using Selector 
+const cartItems = useSelector((store)=>store.cart.items)
+console.log(cartItems)
   return (
     <div className="header flex justify-between border gap-20 ">
       <div className="">
@@ -20,7 +25,9 @@ function Header() {
         <Link to="/about">About Us</Link>
         <Link to="/grocery">Grocery</Link>
         <Link to="/contact">Contact Us</Link>
-        <Link to="/">Cart</Link>
+        <Link to="/cart">
+          Cart - <span className="font-bold">({cartItems.length} items) </span>
+        </Link>
       </div>
       <div className="flex items-center mr-8">
         <span className="font-bold text-[rgba(2,6,12,0.75)] text-lg  pr-5">
