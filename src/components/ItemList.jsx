@@ -2,7 +2,7 @@ import React from "react";
 import { CDN_URL } from "../utils/constants";
 
 function ItemList({ items }) {
-//   console.log(items);
+ 
   return (
     <div>
       {items.map((item) => (
@@ -15,8 +15,11 @@ function ItemList({ items }) {
               <span className="text-[20px] text-[rgba(2,6,12,0.75)] font-bold">
                 {item.card.info.name}
               </span>
-              <span className="text-[16px] font-semibold text-[rgba(2,6,12,0.92)] ">
-                ₹ {item.card.info.price / 100}
+              <span className="text-[16px] font-semibold  text-[rgba(2,6,12,0.92)] ">
+                ₹ {" "}
+                {item.card.info.price
+                  ? item.card.info.price / 100
+                  : item.card.info.defaultPrice / 100}
               </span>
               <span className=" flex mt-3">
                 <p className="text-[rgb(27,166,114)] text-xs font-bold mr-1">
@@ -35,9 +38,14 @@ function ItemList({ items }) {
             <div className="max-w-[156px] ">
               <img
                 src={CDN_URL + item.card.info.imageId}
-                className="w-[156px] h-[144px] rounded-xl"
+                className="w-[156px] h-[144px] rounded-xl "
                 alt=""
               />
+              <div className="inline-flex items-center justify-center relative left-5 -top-[20px] bg-[rgb(255,255,255)] border border-[rgba(2,6,12,0.15)] h-10 rounded-lg w-[120px] cursor-pointer hover:shadow-md">
+                <button className="text-lg font-extrabold uppercase text-[rgb(27,166,114)]">
+                  Add{" "}
+                </button>
+              </div>
             </div>
           </div>
         </div>
