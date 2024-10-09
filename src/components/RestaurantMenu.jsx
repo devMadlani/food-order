@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ShimmerUi from "./shimmerUi";
 import { useParams } from "react-router-dom";
 import useFetchData from "../utils/useFetchData";
@@ -6,8 +6,9 @@ import ResCategory from "./ResCategory";
 function RestaurantMenu() {
   const { resId } = useParams();
   const [resInfo, itemCards, categories] = useFetchData(resId);
-  const listOfMenu = itemCards?.map((item) => item.card.info);
-  console.log(categories);
+  // const listOfMenu = itemCards?.map((item) => item.card.info);
+  const [showIndex, setShowIndex] = useState();
+  // console.log(categories);
   return resInfo?.length === 0 ? (
     <ShimmerUi />
   ) : (
@@ -18,8 +19,15 @@ function RestaurantMenu() {
         <h2 className="text-lg font-normal">
           {resInfo?.cuisines.join(", ")} - {resInfo?.costForTwoMessage}
         </h2>
-        {categories?.map((category,index) => {
-          return <ResCategory data={category.card.card} key={index} />;
+        {categories?.map((category, index) => {
+          return (
+            <ResCategory
+              data={category.card.card}
+              key={index}
+              showItems={index === showIndex ? true  : false}
+              setShowIndex={()=> setShowIndex(index === showIndex ? null : index)}
+            />
+          );
         })}
       </div>
     </div>

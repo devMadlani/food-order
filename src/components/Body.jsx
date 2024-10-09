@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState } from "react";
 
 import ShimmerUi from "./shimmerUi";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 export function Body() {
   const [resObj, setResObj] = useState([]);
   const [searchedData, setSearchedData] = useState([]);
   const [search, setSearch] = useState("");
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+  const { setUserName, loggedInUser } = useContext(UserContext);
   useEffect(() => {
     fetchData();
   }, []);
@@ -73,6 +75,15 @@ export function Body() {
           >
             Top Rated Restuarants
           </button>
+          <label htmlFor="" className="flex items-center">
+            UserName:
+          </label>
+          <input
+            type="text"
+            className="border h-12 rounded-lg px-2"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
         <div className="flex flex-wrap">
           {searchedData?.map((res) => (
