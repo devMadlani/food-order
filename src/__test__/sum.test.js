@@ -1,5 +1,5 @@
-import { sum } from "../components/Sum";
 
+import { sum } from "../components/Sum";
 test("Renders main page correctly", () => {
   const result = sum(4, 5);
 
