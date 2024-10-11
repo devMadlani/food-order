@@ -13,6 +13,7 @@ function ItemList({ items }) {
     <div>
       {items.map((item) => (
         <div
+        data-testid = "items"
           key={item.card.info.id}
           className="border-b border-gray-300 py-2 text-left"
         >

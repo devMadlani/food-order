@@ -68,7 +68,7 @@ export function Body() {
           <button
             onClick={() => {
               const filteredList = resObj.filter(
-                (res) => res.info.avgRating < 4.3
+                (res) => res.info.avgRating > 4.5
               );
               setSearchedData(filteredList);
             }}
