@@ -44,6 +44,7 @@ export function Body() {
           <div className="flex">
             <input
               type="text"
+              data-testid="searchInput"
               className="border border-r-0 rounded rounded-r-none p-3"
               value={search}
               onChange={(e) => {
@@ -91,7 +92,7 @@ export function Body() {
               {res.info?.promoted ? (
                 <RestaurantCardPromoted resData={res} />
               ) : (
-                <RestaurantCard resData={res} />
+                <RestaurantCard resData={res}  />
               )}
             </Link>
           ))}
