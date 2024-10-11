@@ -1,0 +1,67 @@
+{
+  "info": {
+    "id": "640449",
+    "name": "Urban China",
+    "cloudinaryImageId": "g8f1bvwo48sgrwwcitz6",
+    "locality": "Ghod dod road",
+    "areaName": "Ghod dod road",
+    "costForTwo": "₹400 for two",
+    "cuisines": ["Chinese", "Indian", "Fast Food", "Beverages"],
+    "avgRating": 4.4,
+    "parentId": "373984",
+    "avgRatingString": "4.4",
+    "totalRatingsString": "622",
+    "sla": {
+      "deliveryTime": 35,
+      "lastMileTravel": 4.2,
+      "serviceability": "SERVICEABLE",
+      "slaString": "35-40 mins",
+      "lastMileTravelString": "4.1 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-10-11 05:00:00",
+      "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "60% OFF",
+      "subHeader": "UPTO ₹120"
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+      "aggregatedRating": {
+        "rating": "4.7",
+        "ratingCount": "59"
+      },
+      "source": "GOOGLE",
+      "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+  },
+  "analytics": {
+    "context": "seo-data-1ab3268e-98eb-48c7-8fa5-c42d97860279"
+  },
+  "cta": {
+    "link": "https://www.swiggy.com/city/surat/urban-china-ghod-dod-road-rest640449",
+    "type": "WEBLINK"
+  }
+}

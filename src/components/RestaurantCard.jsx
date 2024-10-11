@@ -4,6 +4,7 @@ import UserContext from "../utils/UserContext";
 
 function RestaurantCard(props) {
   const { resData } = props;
+ 
   const {loggedInUser} = useContext(UserContext)
   return (
     <div className="bg-[#f0f0f0] w-[270px] min-h-[350px] hover:border border-black cursor-pointer m-2">
